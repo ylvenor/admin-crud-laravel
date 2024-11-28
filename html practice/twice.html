@@ -1,0 +1,381 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>twice</title>
+<style type="text/css">
+body{
+background-image: url('твайс.jpeg');
+background-size: 50%;
+background-size: 3em;
+background-size: 1550px;
+}
+.dropbtn {
+  background-color: purple;
+  color: white;
+  padding: 16px;
+  font-size: 16px;
+  border: none;
+}
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: lightcyan;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+.dropdown-content b {
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+}
+.dropdown-content b:hover {background-color: darkcyan;}
+.dropdown:hover .dropdown-content {display: block;}
+.dropdown:hover .dropbtn {background-color: darkblue;}
+ul{
+display: flex;
+justify-content: center;
+background-color: #f9c596;
+}
+a {
+display: flex;
+padding: 1em;
+background: rgba(1, 200, 1, .6)
+}
+a:hover {
+background-image: url('twice winter.jpg');
+background-size: 50%;
+background-size: 3em;
+background-size: 120px;
+}
+
+li {
+  list-style-type: none;
+}
+.responsive-menu {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 10px;
+  font-size: 200%;
+}
+.responsive-menu ul li ul li {
+  padding: 5px;
+}
+.responsive-menu ul li ul {
+  display: none;
+  font-size: 60%;
+  padding-top: 30px;
+}
+.responsive-menu:hover {background-color: #fc5d9d; }
+#trigger {
+  display: none;
+}
+#trigger:checked + .responsive-menu ul li:hover ul {
+  display: block;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+.container {
+  display: block;
+  margin: 0 auto;
+  width: 80%;
+}
+.column {
+  display: block;
+  padding: 0px 10px;
+  width: 50%;
+}
+h2 {
+  color: whitesmoke;
+  text-align: center;
+  margin: 20px 0;
+}
+.accordion {
+  display: block;
+  margin: 0px;
+  position: relative;
+}
+.accordion input {
+  display: none;
+  position: absolute;
+  visibility: hidden;
+  left: 50%;
+  top: 50%;
+  z-index: 1;
+}
+.accordion__header {
+  background-color: #ecd5e3;
+  border: 1px solid #8c79b4;
+  border-bottom-width: 0px;
+  color: #2253a3;
+  cursor: pointer;
+  transition: background 0.2s;
+  padding: 20px;
+  position: relative;
+  z-index: 2;
+}
+.accordion__header:hover {
+  background-color: #e67ea3;
+  color: white;
+}
+.accordion__header:hover:before, .accordion__header:hover:after {
+  background-color: white;
+}
+.accordion__header:before, .accordion__header:after {
+  background-color: #2253a3;
+  content: '';
+  display: block;
+  position: absolute;
+  z-index: 3;
+}
+.accordion input:checked ~ .accordion__header {
+  background: #DDA0DD;
+  border-color: #FFC0CB;
+  color: white;
+}
+.accordion input:checked ~ .accordion__header:hover {
+  background-color: #DDA0DD;
+  border-color: #FFC0CB;
+  color: white;
+}
+.accordion input:checked ~ .accordion__header:before {
+  background-color: #D8BFD8;
+}
+.accordion input:checked ~ .accordion__header:after {
+  display: none;
+}
+.accordion__content {
+  background-color: #F5F5F5;
+  border: 1px solid #607D8B;
+  border-width: 0px 1px;
+  display: none;
+  padding: 20px;
+}
+.accordion input:checked ~ .accordion__content {
+  display: block;
+}
+.accordion:last-child .accordion__content {
+  border-bottom-width: 1px;
+}
+.accordion__content h6 {
+  color: #EE82EE;
+  font-size: 18px;
+  margin-bottom: 5px;
+}
+p {color: white;}
+
+form {position: absolute; bottom: 10px;}
+
+h3 {left: 10px;
+color: black;}
+th {color: white; background: purple;}
+table {
+border-collapse: collapse;
+background: white;
+color: black;
+shape-margin: 10px;
+}         
+th, td {
+text-align: center;
+height: 30px;
+width: 30px;
+font-weight: bold;
+}
+
+</style>
+</head>
+
+<body>
+<div class="dropdown">
+<button class="dropbtn">Member positions</button>
+<div class="dropdown-content">
+<b href="">vocalists</b>
+<b href="">dancers</b>
+<b href="">rappers</b>
+<b href="">visuals</b>
+</div>
+</div>
+
+
+<input type="checkbox" id="trigger" />
+<div class="responsive-menu">
+<ul>
+<li>
+<label for="trigger">Menu</label>
+<ul>
+<li><a href="">about group</a></li>
+<li><a href="">about company</a></li>
+<li><a href="">TWICE achievements</a></li>
+</ul>
+</li>
+</ul>
+</div>
+
+<div class="container">
+<section class="column">
+<h2>Get to know members :P</h2>
+<div>
+<label class="accordion">
+<input type='checkbox' name='checkbox-accordion'>
+<div class="accordion__header">Vocal line</div>
+<div class="accordion__content">
+<h6>Im Na Yeon</h6>
+<h6>Yoo Jeong Yeon</h6>
+<h6>Park Ji Hyo</h6>
+</div>
+</label>
+<label class="accordion">
+<input type='checkbox' name='checkbox-accordion'>
+<div class="accordion__header">День рождения Шондыр</div>
+<div class="accordion__content">
+  <h3>Март 2022</h3>
+<table>
+<thead>
+<tr><th>пн</th>
+<th>вт</th>
+<th>ср</th>
+<th>чт</th>
+<th>пт</th>
+<th>сб</th>
+<th>вс</th>
+</tr>
+</thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td style="background: red;">4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+</label>
+<label class="accordion">
+<input type='checkbox' name='checkbox-accordion'>
+<div class="accordion__header">апрель</div>
+<div class="accordion__content">
+  <h3>Апрель 2022</h3>
+<table>
+<thead>
+<tr><th>пн</th>
+<th>вт</th>
+<th>ср</th>
+<th>чт</th>
+<th>пт</th>
+<th>сб</th>
+<th>вс</th>
+</tr>
+</thead>
+        <tbody>
+            <tr>
+                <td></td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+                <td style="background: red;">4</td>
+                <td>5</td>
+                <td>6</td>
+            </tr>
+            <tr></tr>
+            <tr>
+                <td>7</td>
+                <td>8</td>
+                <td>9</td>
+                <td>10</td>
+                <td>11</td>
+                <td>12</td>
+                <td>13</td>
+            </tr>
+            <tr>
+                <td>14</td>
+                <td>15</td>
+                <td>16</td>
+                <td>17</td>
+                <td>18</td>
+                <td>19</td>
+                <td>20</td>
+            </tr>
+            <tr>
+                <td>21</td>
+                <td>22</td>
+                <td>23</td>
+                <td>24</td>
+                <td>25</td>
+                <td>26</td>
+                <td>27</td>
+            </tr>
+            <tr>
+                <td>28</td>
+                <td>29</td>
+                <td>30</td>
+                <td>31</td>
+                <td>1</td>
+                <td>2</td>
+                <td>3</td>
+            </tr>
+        </tbody>
+      </table>
+</div>
+</label>
+</div>
+</section>
+</div>
+
+<form>
+   <p>date: <input type="date" name="calendar">
+   <input type="submit" value="Отправить"></p>
+</form>
+
+</body>
+</html>

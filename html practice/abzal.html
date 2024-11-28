@@ -1,0 +1,154 @@
+<html>
+<head>
+<style>  
+ul {
+  list-style: none;
+        width: 600px;  
+        height: 50px;  
+        margin: auto;  
+        border: 5px solid black;  
+        background: #FFC0CB; 
+}
+a {
+  text-decoration: none;
+  background:#FFC0CB;
+  color:black;
+  padding:0px 15px; 
+  font-family: arial; 
+  line-height:50px;
+  display: block; 
+  border-right: 2px solid blue;
+
+}
+a:hover {
+  background:red;
+}
+li {
+  float:left;
+}
+    aaaa, section {  
+        display: block;  
+    }  
+  
+    #container {  
+        width: 600px;  
+        height: 1950px;  
+        margin: auto;  
+        border: 5px solid black;  
+        background: #FFC0CB;  
+    }  
+   
+    header {  
+        margin: 20px;  
+        height: 80px;  
+        border: 2px solid #7f7f7f;  
+        background: #EEE8AA;  
+        text-align: center;  
+    }  
+   
+    section {  
+        float: center;  
+        margin: 10px;  
+        height: 345px;  
+        width: 575px;  
+        border: 2px solid #7f7f7f;  
+        background: #F5DEB3;  
+        text-align: center;  
+    }  
+
+button {
+  font-size: 30px;
+  padding: 10px 30px;
+  margin: 10px;
+  border: 0;
+  cursor: pointer;
+  color: black;
+  text-transform: lowercase;
+  border-radius: 10px;
+  display: inline-block;
+  overflow: hidden;
+  transition: all 0.4s cubic-bezier(.86, .01, .15, .99);
+margin-left: 225px;
+}
+
+button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0px;
+  left: 0px;
+  right: 0px;
+  bottom: 0;
+}
+
+button.gradient:hover {
+  color: white;
+  transform: translateY(-5px);
+}
+
+.button-one {
+  background-color: #FFC0CB;
+  transform: translateY(0);
+}
+
+.button-one::before {
+  background: linear-gradient(to right, #FFC0CB, red);
+  -webkit-transform: scaleY(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50% 100%;
+  transform-origin: 100% 0%;
+  transition: 0.4s cubic-bezier(.86, .01, .15, .99);
+}
+
+.button-one:hover::before {
+  transform: scaleX(1.1) scaleY(1.1);
+}
+
+.button-one:hover {
+  color: #333;
+}
+
+</style>
+</head>
+<body>
+<ul>
+<li><a href="#sec1">sec1</a></li>
+<li><a href="#sec2">sec2</a></li>
+<li><a href="#sec3">sec3</a></li>
+<li><a href="#sec4">sec4</a></li>
+<li><a href="#sec5">sec5</a></li>
+<li><a href="#">sec6</a></li>
+<li><a href="#">sec7</a></li>
+<li><a href="#">sec8</a></li>
+</ul>
+<div id="container">  
+<button class="button-one gradient"><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/index.html">Header</a></button>
+<div class="first" id="sec1"> 
+<section>  
+<h1><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/index1.html">1</a></h1>  
+</section>  
+</div>
+<div class="second" id="sec2">
+<section>  
+<h1><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/index1.html">2</a></h1>  
+</section>  
+</div>
+<div class="third" id="sec3">
+<section>  
+<h1><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/index1.html">3</a></h1>  
+</section>   
+</div>
+<div class="fourth" id="sec4">
+<section>  
+<h1><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/index.html">4</a></h1>  
+</section>   
+</div>
+<div class="fifth" id="sec5">
+<section>  
+<h1><a href="file:///C:/Users/alish/OneDrive/%D0%A0%D0%B0%D0%B1%D0%BE%D1%87%D0%B8%D0%B9%20%D1%81%D1%82%D0%BE%D0%BB/html%20practice/aida.html">5</a></h1>  
+</section>  
+
+</div>  
+</div>  
+</body>
+</html>
